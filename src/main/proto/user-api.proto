@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package userApi;
+
+service UserApi {
+
+  rpc GetUserByClientCode(userApi.UserByClientCodeRequest) returns (userApi.UserResponse) {};
+}
+
+message UserByClientCodeRequest {
+  string clientCode = 1;
+}
+
+message UserResponse {
+  string publicId = 1;
+  string phone = 2;
+  repeated int64 groups = 3;
+}

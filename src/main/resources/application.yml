@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: simple-grpc-client-server
+
+grpc:
+  client:
+    user-api:
+      url: localhost:6565
+
+logging:
+  pattern:
+    console: "%clr(%-5level) %d{yyy-MM-dd HH:mm:ss.SS} [%thread] %clr([%logger{0}.%M]){cyan} %m%wEx%n"
+    file: "[%-5level] %d{yyy-MM-dd HH:mm:ss.SS} [%thread] [%-26logger{26}] %m%wEx%n"
